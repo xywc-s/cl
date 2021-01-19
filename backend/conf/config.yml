@@ -1,14 +1,14 @@
 api:
-  address: "localhost:8000"
+  address: "http://129.28.160.9:8000"
 mongo:
-  host: localhost
+  host: 129.28.160.9
   port: 27017
   db: mercador
-  username: ""
-  password: ""
-  authSource: "admin"
+  username: "etfun"
+  password: "Vzgc7tJ3"
+  authSource: "mercador"
 redis:
-  address: localhost
+  address: 129.28.160.9
   password: ""
   database: 1
   port: 6379
@@ -20,12 +20,12 @@ log:
 server:
   host: 0.0.0.0
   port: 8000
-  master: "Y"
+  master: "N"
   secret: "etfun"
   register:
     # type 填 mac/ip/customName, 如果是ip，则需要手动指定IP, 如果是 customName, 需填写你的 customNodeName
     type: "customName"
-    customNodeName: "master" # 自定义节点名称, default node1,只有在type = customName 时生效
+    customNodeName: "Erain" # 自定义节点名称, default node1,只有在type = customName 时生效
     ip: ""
   lang: # 安装语言环境, Y 为安装，N 为不安装
     python: "N"
@@ -62,6 +62,6 @@ notification:
       user: ''
       password: ''
 repo:
-  apiUrl: "https://center.crawlab.local/api"
+  apiUrl: "https://center.crawlab.cn/api"
 #  apiUrl: "http://localhost:8002"
-  ossUrl: "https://repo.crawlab.local"
+  ossUrl: "https://repo.crawlab.cn"
