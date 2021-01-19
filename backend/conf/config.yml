@@ -3,7 +3,7 @@ api:
 mongo:
   host: localhost
   port: 27017
-  db: crawlab_test
+  db: mercador
   username: ""
   password: ""
   authSource: "admin"
@@ -21,14 +21,14 @@ server:
   host: 0.0.0.0
   port: 8000
   master: "Y"
-  secret: "crawlab"
+  secret: "etfun"
   register:
     # type 填 mac/ip/customName, 如果是ip，则需要手动指定IP, 如果是 customName, 需填写你的 customNodeName
-    type: "mac"
-    customNodeName: "" # 自定义节点名称, default node1,只有在type = customName 时生效
+    type: "customName"
+    customNodeName: "master" # 自定义节点名称, default node1,只有在type = customName 时生效
     ip: ""
   lang: # 安装语言环境, Y 为安装，N 为不安装
-    python: "Y"
+    python: "N"
     node: "N"
     java: "N"
     dotnet: "N"
@@ -37,7 +37,7 @@ server:
 spider:
   path: "/app/spiders"
 task:
-  workers: 16
+  workers: 4
 other:
   tmppath: "/tmp"
 version: 0.5.1
@@ -47,7 +47,7 @@ setting:
   allowRegister: "N"
   enableTutorial: "N"
   runOnMaster: "Y"
-  demoSpiders: "N"
+  demoSpiders: "Y"
   checkScrapy: "Y"
   autoInstall: "Y"
   esClient: "" # Your ES client, for example, http://192.168.1.1:9200 or http://your-domain.com, if not use es, set empty
@@ -62,6 +62,6 @@ notification:
       user: ''
       password: ''
 repo:
-  apiUrl: "https://center.crawlab.cn/api"
+  apiUrl: "https://center.crawlab.local/api"
 #  apiUrl: "http://localhost:8002"
-  ossUrl: "https://repo.crawlab.cn"
+  ossUrl: "https://repo.crawlab.local"
